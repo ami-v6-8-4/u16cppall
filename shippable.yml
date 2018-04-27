@@ -5,7 +5,11 @@ compiler:
   - clang
   
 build: 
-
+  pre_ci_boot:
+    image_name: drydock/u14cppall
+    image_tag: master
+    pull: true
+    
   ci:
     - ls
     - pwd
